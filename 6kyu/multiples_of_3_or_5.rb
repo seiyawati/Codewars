@@ -15,3 +15,8 @@ end
 def solution(number)
   (1...number).select {|i| i%3==0 || i%5==0}.inject(:+)
 end
+
+##  ruby 2.4以上
+def solution(number)
+  (1...number).select {|i| i%3==0 || i%5==0}.sum
+end
