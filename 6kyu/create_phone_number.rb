@@ -7,6 +7,6 @@ def create_phone_number(numbers)
 end
 
 # Best Practice
-def createPhoneNumber(array)
+def create_phone_number(array)
   '(%d%d%d) %d%d%d-%d%d%d%d' % array
 end
