@@ -10,16 +10,17 @@ def likes(names)
   elsif length == 3
     "#{names[0]}, #{names[1]} and #{names[2]} likes this"
   else
-    "#{names[0]}, #{names[1]} and #{length-2} others likes this"
+    "#{names[0]}, #{names[1]} and #{length - 2} others likes this"
   end
 end
 
 # Best Practices
+# 一つの値に対して複数の候補の中で一致するものを探すような場合にはcase文で書いたほうがrubyらしい書き方
 def likes(names)
   case names.size
-  when 0 
+  when 0
     "no one likes this"
-  when 1 
+  when 1
     "#{names[0]} likes this"
   when 2
     "#{names[0]} and #{names[1]} like this"
@@ -30,6 +31,7 @@ def likes(names)
   end
 end
 
+# %記法
 def likes(names)
   case names.length
   when 0
